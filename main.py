@@ -18,7 +18,7 @@ def calculate_fib(n: int) -> int:
 
 # 不正な入力の判定と型変換を行う関数
 def validate_and_convert(n_str: str | None) -> int:
-    # 未入力チェック
+    # 未入力チェックしたい
     if n_str is None:
         raise ValueError("n is required.")
 
