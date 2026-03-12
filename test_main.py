@@ -25,7 +25,7 @@ def test_fib_performance_and_memoization():
     second_duration = end_time - start_time
     print(f"[n={n}] 2回目の計算時間: {second_duration:.6f} 秒")
 
-    # 検証：2回目はメモ化のおかげで劇的に速いはず
+    # 検証：2回目はメモ化のおかげで速いはず
     assert second_duration < first_duration
     assert response.json()["status"] == 200
 
@@ -59,3 +59,4 @@ def test_fib_error_handling():
     response = client.get("/fib?n=100001")
     assert response.status_code == 400
     assert "too large" in response.json()["message"]
+
